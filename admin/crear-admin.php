@@ -1,4 +1,6 @@
 <?php
+        include_once 'funciones/sesiones.php';
+        include_once 'funciones/funciones.php';
         include_once 'templates/header.php';
         include_once 'templates/barra.php';
         include_once 'templates/navegacion.php';
@@ -44,8 +46,8 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="contrasena">Contraseña</label>
-                  <input type="contrasena" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
+                  <label for="password">Contraseña</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
                 </div>              
               </div>
               <!-- /.box-body -->

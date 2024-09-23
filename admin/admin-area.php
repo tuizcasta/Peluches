@@ -1,4 +1,6 @@
 <?php
+        include_once 'funciones/sesiones.php';
+        include_once 'funciones/funciones.php';
         include_once 'templates/header.php';
         include_once 'templates/barra.php';
         include_once 'templates/navegacion.php';
@@ -13,8 +15,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blank page
-        <small>it all starts here</small>
+        Dashboard
+        <small>Todo inicia aqui</small>
       </h1>
     </section>
 

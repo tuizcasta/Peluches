@@ -4,7 +4,7 @@
 
 <header class="main-header">
     <!-- Logo -->
-    <a href="../index.html" class="logo">
+    <a href="admin-area.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>P</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -34,7 +34,7 @@
                   <a href="#" class="btn btn-default btn-flat">Ajustes</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Cerrar Sesion</a>
+                  <a href="login.php?cerrar_sesion=true" class="btn btn-default btn-flat">Cerrar Sesion</a>
                 </div>
               </li>
             </ul>
