@@ -1,90 +1,97 @@
-<?php
-        include_once 'funciones/sesiones.php';
-        include_once 'funciones/funciones.php';
-        include_once 'templates/header.php';
-        include_once 'templates/barra.php';
-        include_once 'templates/navegacion.php';
-?>  
+<?php 
+include_once 'funciones/sesiones.php';
+include_once 'funciones/funciones.php';
+include_once 'templates/header.php'; ?>
+
+
+<body class="hold-transition skin-blue fixed sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+    <?php include_once 'templates/barra.php'; ?>
+    <?php include_once 'templates/navegacion.php'; ?>
+
+  <!-- =============================================== -->
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Lista de Administradores
-        <small></small>
+        Administradores
+        <small>Maneja los accesos al sitio aquí</small>
       </h1>
+
+      
     </section>
 
-    <!-- Main content -->
     <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title">Listado de Todos los Administradores</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
 
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Maneja los usuarios en esta seccion</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="registros" class="table table-bordered table-striped">
+            <a href="nuevo-admin.php" class="btn btn-success">Añadir Nuevo</a>
+            <table id="registros" class="table table-bordered table-hover">
                 <thead>
-                <tr>
-                    <th>Usuario</th>
-                    <th>Nombre</th>
-                    <th>Acciones</th>
-                </tr>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Acciones</th>
+                        </tr>
                 </thead>
                 <tbody>
-                    <?php
-                        try{
-                            $sql = "SELECT id_admin, usuario, nombre FROM admins";
-                            $resultado = $conn->query($sql);
-                        }catch(Exception $e){
-                            $error = $e ->getMessage();
-                            echo $error;
-                        }
-                        if ($resultado->num_rows > 0) {
-                            while ($admin = $resultado->fetch_assoc()) { ?>
-                                <tr>
-                                    <td><?php echo $admin['usuario']; ?></td>
-                                    <td><?php echo $admin['nombre']; ?></td>
-                                    <td><a href="editar-admin.php?id=<?php echo $admin['id_admin']?>"  class="btn bg-orange btn-flat margin">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                        <a href="#" data-id="<?php echo $admin['id_admin']; ?>" data-tipo="admin" class="btn bg-maroon bnt-flat margin borrar_registro">
-                                            <i class="fa fa-trash"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php }
-                        } else {
-                            echo "<tr><td colspan='2'>No hay administradores registrados.</td></tr>";
-                        }?>
+
+                <?php
+                    try {
+
+                        $sql = "SELECT ID_admin, usuario FROM `admins` ";
+                        $resultado = $conn->query($sql);
+                    } catch (Exception $e) {
+                        $error = $e->getMessage();
+                    } ?>
+
+                    
+                        <?php while($admin = $resultado->fetch_assoc() ) { ?>
+                            <tr>
+                                <td><?php echo $admin['usuario']; ?></td>
+
+                                <td>
+                                        <a href="editar-admin.php?id=<?php echo $admin['ID_admin']; ?>" type="button" class="btn bg-orange btn-flat margin"> <i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="#" data-id="<?php echo $admin['ID_admin']; ?>" data-tipo="admin" type="button" class="btn bg-maroon btn-flat margin borrar_registro"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                   
+
                 </tbody>
                 <tfoot>
-                <tr>
-                    <th>Usuario</th>
-                    <th>Nombre</th>
-                    <th>Acciones</th>
-                </tr>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Acciones</th>
+                        </tr>
                 </tfoot>
-              </table>
-            </div>
-            <!-- /.box-body -->
+            </table>
           </div>
-          <!-- /.box -->
+          <!-- /.box-body -->
         </div>
-        <!-- /.col -->
+        <!-- /.box -->
       </div>
-      <!-- /.row -->
-    </section>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
-<?php
-        include_once 'templates/footer.php';
+
+<?php 
+  $conn->close();
+  include_once 'templates/footer.php';
+  include_once 'templates/footer-scripts.php';
+
+
 ?>
-
-
