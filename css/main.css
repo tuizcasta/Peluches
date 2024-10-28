@@ -102,7 +102,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  background-color: #f2f2f2;
+  background-color: #f2f2f293;
   font-family: 'Open Sans', sans-serif;
 }
 /** Globales **/
@@ -200,7 +200,7 @@ ul {
 }
 /** Lettering**/
 h1.nombre-sitio span {
-  position: relative;
+  
   text-shadow: 0 0 30px black;
 }
 
@@ -302,18 +302,18 @@ p.slogan span {
 h1.nombre-sitio {
   font-size: 5.9vw;
   text-transform: uppercase;
-  font-family: 'Timoteo', sans-serif;
+  font-family: 'Timoteo';
 }
 @media only screen and (min-width:768px) {
   h1.nombre-sitio {
-    font-size: 11.5vw;
+    font-size: 10.5vw;
     margin: 0;
-    line-height: 1;
+    line-height: 1.12;
   }
 }
 /** Barra **/
 div.barra {
-  background-color: #0093d3;
+  background-color: #00bbf9;
   padding: 20px 0;
 }
 .fixed {
@@ -524,6 +524,7 @@ div.invitado img {
   -webkit-filter: grayscale(1);
   -webkit-transition: all .5s ease-in-out;
 }
+
 div.invitado:hover img {
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.1);
@@ -542,10 +543,7 @@ div.invitado p {
   text-transform: uppercase;
 -webkit-transition: all .5s ease-in-out;
 }
-div.invitado:hover p {
-  bottom: -80px;
-  opacity: 0;
-}
+
 .parallax::before {
   width: 100%;
   height: 100%;
