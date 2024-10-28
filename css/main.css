@@ -106,6 +106,14 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 /** Globales **/
+
+@font-face {
+  font-family: 'Timoteo';
+  src: url('/Fuente_timoteo/Timoteo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .contenedor {
   width: 98%;
   margin:0 auto;
@@ -294,7 +302,7 @@ p.slogan span {
 h1.nombre-sitio {
   font-size: 5.9vw;
   text-transform: uppercase;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Timoteo', sans-serif;
 }
 @media only screen and (min-width:768px) {
   h1.nombre-sitio {
