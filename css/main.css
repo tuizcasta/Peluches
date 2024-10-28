@@ -199,8 +199,9 @@ ul {
   float: right;
 }
 /** Lettering**/
+
 h1.nombre-sitio span {
-  
+  position: relative;
   text-shadow: 0 0 30px black;
 }
 
@@ -302,7 +303,8 @@ p.slogan span {
 h1.nombre-sitio {
   font-size: 5.9vw;
   text-transform: uppercase;
-  font-family: 'Timoteo';
+  font-family: 'Timoteo', sans-serif;
+  text-shadow: 0 0 30px black;
 }
 @media only screen and (min-width:768px) {
   h1.nombre-sitio {
@@ -752,7 +754,7 @@ div.cuenta-regresiva ul li {
 /** Footer **/
 
 footer {
-  background-color: #0093d3;
+  background-color: #00bbf9;
   padding-top: 40px;
   margin-top: 20px;
 }
