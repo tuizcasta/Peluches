@@ -407,6 +407,14 @@ div.menu-movil span{
     display: block; 
 }
 
+.navegacion-principal {
+  display: none;
+}
+
+.menu-abierto .navegacion-principal {
+  display: block;
+}
+
 /** Talleres **/
 section.programa {
   position: relative;
