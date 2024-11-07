@@ -1347,3 +1347,9 @@ table.registrados tr:nth-child(4n-1) {
 .PDF {
   text-align: center;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Puedes ajustar el margen como prefieras */
+}
