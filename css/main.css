@@ -677,7 +677,7 @@ ul.lista-precios > li {
 @media only screen and (min-width:768px){
   ul.lista-precios > li {
         float: left;
-        width: 33.3%;
+        width: 50%;
   }
 }
 
