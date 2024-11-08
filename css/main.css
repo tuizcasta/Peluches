@@ -764,8 +764,8 @@ blockquote p::before {
   padding:0;
   line-height: 1;
   color: #fe4918;
-}
-footer.info-testimonial {
+}footer
+.info-testimonial {
   padding: 0;
   background-color: transparent;
 }
